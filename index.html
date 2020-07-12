@@ -8,6 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+$(function () {
+  var nua = navigator.userAgent
+  var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+  if (isAndroid) {
+    $('select.form-control').removeClass('form-control').css('width', '100%')
+  }
+})
+</script>
     <title>Vegan Word!</title>
   </head>
   <body id="home" data-spy="scroll" data-target=".navbar">
